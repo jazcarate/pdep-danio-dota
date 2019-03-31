@@ -1,0 +1,36 @@
+library:
+  source-dirs: src
+tests:
+  pdep-danio-dota-test:
+    source-dirs: test
+    main: Spec.hs
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - pdep-danio-dota
+copyright: 2019 Joaquin Azcarate
+maintainer: j@florius.com.ar
+dependencies:
+- hspec
+- base >= 4.7 && < 5
+name: pdep-danio-dota
+version: 0.1.0.0
+extra-source-files:
+- README.md
+- ChangeLog.md
+author: Joaquin Azcarate
+github: jazcarate/pdep-danio-dota
+license: BSD3
+executables:
+  pdep-danio-dota-exe:
+    source-dirs: app
+    main: Main.hs
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - pdep-danio-dota
+description: Please see the README on GitHub at <https://github.com/jazcarate/pdep-danio-dota#readme>
