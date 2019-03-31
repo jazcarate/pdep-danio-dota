@@ -1,11 +1,11 @@
 module Solucion.DanioDotA
     (
-        danioSinItem, danioConVanguard, danioConMoM, danioConCrimsonGuard
+        danioSinItem, danioConVanguard, danioConMaskOfMadness, danioConCrimsonGuard
     ) where
 
 danioSinItem = danio nada
 danioConVanguard = danio vanguard'
-danioConMoM = danio mom
+danioConMaskOfMadness = danio maskOfMadness
 
 danioConCrimsonGuard = danio . crimsonGuard
 
@@ -19,7 +19,7 @@ vanguard :: Int -> Int
 vanguard danio = danio `div` 2
 vanguard' = flip div 2
 
-mom = (*) 2
+maskOfMadness = (*) 2
 
 crimsonGuard :: Bool -> Int -> Int
 crimsonGuard True = crimsonGuardActivo
